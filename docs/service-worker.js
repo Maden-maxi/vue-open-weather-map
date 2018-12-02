@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/vue-open-weather-map/precache-manifest.4f11068aabec9ecce6def6449e940b01.js"
+  "/vue-open-weather-map/precache-manifest.0038cf7a220d9ea1e3d53e91aa4d0d66.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vue-open-weather-map"});
