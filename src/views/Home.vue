@@ -7,19 +7,13 @@
 
       <search-form @search="addCity"/>
       <div v-if="userLocation.coord">
-          <h5>Weather in {{ userLocation.name }}: {{userLocation.main.temp | celsius }}</h5>
-          <GmapMap v-if="userLocation.coord"
-                   :center="{lat: userLocation.coord.lat, lng: userLocation.coord.lon}"
-                   :zoom="10"
-                   map-type-id="terrain"
-                   style="width: 100%; height: 300px"
-          >
-              <GmapMarker v-if="userLocation.coord"
-                          :position="{lat: userLocation.coord.lat, lng: userLocation.coord.lon}"
-                          :clickable="true"
-                          :draggable="true"
-              />
-          </GmapMap>
+          <div class="md-layout md-gutter">
+              <h1 class="md-layout-item md-size-100">Your city</h1>
+              <city-item :city="userLocation" class="md-layout-item md-size-100"/>
+          </div>
+      </div>
+      <div class="md-layout md-gutter">
+          <h2 class="md-layout-item md-size-100">{{cities.length ? 'Cities' : 'You haven\'t added cities. Please add city.'}}</h2>
       </div>
       <transition-group name="list" tag="div" class="md-layout md-gutter">
           <div v-for="city in cities" :key="city.id" class="md-layout-item md-size-33 md-small-size-50 md-xsmall-size-100">
