@@ -2,7 +2,7 @@
     <div class="md-layout md-gutter">
         <div class="md-layout-item ">
             <md-field>
-                <label>Enter city.<br> </label>
+                <label>Enter city</label>
                 <md-input v-model="city" @keyup.enter="submit"></md-input>
                 <md-button class="md-raised md-primary" :disabled="!city" @click="submit">Add</md-button>
             </md-field>

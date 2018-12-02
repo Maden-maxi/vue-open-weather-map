@@ -8,15 +8,15 @@ self.__precacheManifest = [
     "url": "/vue-open-weather-map/js/chunk-vendors.20cdda83.js"
   },
   {
-    "revision": "6a2465fc44a5abe2faab",
-    "url": "/vue-open-weather-map/js/app.a1ad867c.js"
+    "revision": "ee6c9ebd52450b1e35d8",
+    "url": "/vue-open-weather-map/js/app.9eb76e4c.js"
   },
   {
     "revision": "9ed60a588cba54707803",
     "url": "/vue-open-weather-map/js/about.846e3418.js"
   },
   {
-    "revision": "114aedcce22853df75fda641feb0c3cf",
+    "revision": "83bca9b0d667c9a75429d3b4561cb8e0",
     "url": "/vue-open-weather-map/index.html"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = [
     "url": "/vue-open-weather-map/css/chunk-vendors.4ccd2f4c.css"
   },
   {
-    "revision": "6a2465fc44a5abe2faab",
-    "url": "/vue-open-weather-map/css/app.04ff183f.css"
+    "revision": "ee6c9ebd52450b1e35d8",
+    "url": "/vue-open-weather-map/css/app.86ca3e6e.css"
   },
   {
     "revision": "9ed60a588cba54707803",
