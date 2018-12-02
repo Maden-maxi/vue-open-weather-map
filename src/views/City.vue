@@ -8,7 +8,7 @@
       <img :src="`//openweathermap.org/img/w/${weather.icon}.png`" :title="weather.main" :alt="weather.main">
         <span>{{weather.main}}</span>
     </div>
-    <table>
+    <table class="table">
         <tr>
             <th>Temperature</th>
             <td>{{city.main.temp | celsius }}</td>
@@ -74,7 +74,15 @@ export default {
   display: flex;
   align-items: center;
 }
-table th {
+.table th {
   text-align: left;
+}
+.table tr:nth-child(odd) {
+  background: #b33231;
+  color: #fff;
+}
+.table tr:nth-child(even) {
+  background: #fff;
+  color: #000;
 }
 </style>

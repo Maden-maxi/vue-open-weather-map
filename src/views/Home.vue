@@ -21,11 +21,11 @@
               />
           </GmapMap>
       </div>
-      <div class="md-layout md-gutter">
+      <transition-group name="list" tag="div" class="md-layout md-gutter">
           <div v-for="city in cities" :key="city.id" class="md-layout-item md-size-33 md-small-size-50 md-xsmall-size-100">
               <city-item :city="city" @remove="removeCity"/>
           </div>
-      </div>
+      </transition-group>
   </div>
 </template>
 
@@ -92,5 +92,13 @@ export default {
 .md-layout-item {
   padding-top: 8px;
   padding-bottom: 8px;
+}
+.list-enter-active,
+.list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
 }
 </style>

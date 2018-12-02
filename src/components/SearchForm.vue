@@ -1,12 +1,13 @@
 <template>
-    <div>
-        <md-field>
-            <label>Enter city.<br> </label>
-            <md-input v-model="city"></md-input>
-            <md-button class="md-raised md-primary" @click="submit(city)">Add</md-button>
-        </md-field>
-        <div>Examples: Odessa | Odessa,UA</div>
-    </div>
+    <form class="md-layout md-gutter">
+        <div class="md-layout-item ">
+            <md-field>
+                <label>Enter city.<br> </label>
+                <md-input v-model="city"></md-input>
+                <md-button class="md-raised md-primary" :disabled="!city" @click="submit">Add</md-button>
+            </md-field>
+        </div>
+    </form>
 </template>
 
 <script>
@@ -18,9 +19,9 @@ export default {
     };
   },
   methods: {
-    submit(city) {
+    submit() {
+      this.$emit("search", this.city);
       this.city = "";
-      this.$emit("search", city);
     }
   }
 };

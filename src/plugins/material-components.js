@@ -12,8 +12,12 @@ import {
   MdDialog,
   MdDialogConfirm,
   MdDialogAlert,
-  MdTable
+  MdTable,
+  MdAutocomplete,
+  MdMenu,
+  MdList
 } from "vue-material/dist/components";
+
 Vue.use(MdButton);
 Vue.use(MdContent);
 Vue.use(MdTabs);
@@ -25,3 +29,6 @@ Vue.use(MdDialog);
 Vue.use(MdDialogConfirm);
 Vue.use(MdDialogAlert);
 Vue.use(MdTable);
+Vue.use(MdAutocomplete);
+Vue.use(MdMenu);
+Vue.use(MdList);
