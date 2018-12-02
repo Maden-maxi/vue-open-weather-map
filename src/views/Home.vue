@@ -9,7 +9,7 @@
       <div v-if="userLocation.coord">
           <div class="md-layout md-gutter">
               <h1 class="md-layout-item md-size-100">Your city</h1>
-              <city-item :city="userLocation" class="md-layout-item md-size-100"/>
+              <city-item :city="userLocation" :isDeletable="false" class="md-layout-item md-size-100"/>
           </div>
       </div>
       <div class="md-layout md-gutter">

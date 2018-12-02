@@ -15,7 +15,7 @@
             </md-card-header>
 
             <md-card-actions>
-                <md-button class="md-fab" @click="active = true">
+                <md-button class="md-fab" v-if="isDeletable" @click="active = true">
                     <md-icon>delete</md-icon>
                 </md-button>
                 <router-link tag="md-button" :to="{ name: 'city', params: { id: city.id } }">View details</router-link>
@@ -31,7 +31,11 @@
 export default {
   name: "CityItem",
   props: {
-    city: Object
+    city: Object,
+    isDeletable: {
+      type: Boolean,
+      default: true
+    }
   },
   data() {
     return {

@@ -1,13 +1,13 @@
 <template>
-    <form class="md-layout md-gutter">
+    <div class="md-layout md-gutter">
         <div class="md-layout-item ">
             <md-field>
                 <label>Enter city.<br> </label>
-                <md-input v-model="city"></md-input>
+                <md-input v-model="city" @keyup.enter="submit"></md-input>
                 <md-button class="md-raised md-primary" :disabled="!city" @click="submit">Add</md-button>
             </md-field>
         </div>
-    </form>
+    </div>
 </template>
 
 <script>
@@ -20,8 +20,10 @@ export default {
   },
   methods: {
     submit() {
-      this.$emit("search", this.city);
-      this.city = "";
+      if (this.city) {
+        this.$emit("search", this.city);
+        this.city = "";
+      }
     }
   }
 };
